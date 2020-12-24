@@ -17,7 +17,8 @@ int id;
 };
 score student[16];
 score2 stu[16];
-int mian()
+
+int main()
 {
 //void fun (stu *a,stu *b)
 int n;
@@ -32,21 +33,29 @@ stu[i].sum=student[i].chinese+student[i].math+student[i].english;
 stu[i].id=i;
 
 }
-return 0;
-}
-/*for(i=1;i<=n;i++)
+
+
+for(i=1;i<=n;i++)
 for(j=i+1;j<=n;j++)
 if(stu[i].sum==stu[j].sum)
 {
-if(student[i].chinese>student[j].chinese)//则交换两个学生的位置
+if(student[i].chinese<student[j].chinese)//则交换两个学生的位置
 
 swap (stu[i],stu[j]);
 }
-//else if(student[i].chinese==student[j].chinese)
-return 0;
+else if(stu[i].sum<stu[j].sum)
+{
+swap(stu[i],stu[j]);
 }
 
-*/
+
+for (i=1;i<=5;i++)
+{
+	cout<<"前五名学生的学号成绩"<<endl;
+cout<<stu[i].id<<" "<<stu[i].sum<<endl;
+}
+return 0;
+}
 
 
 /*void fun (stu *a,stu *b)
